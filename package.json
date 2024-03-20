@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "compresion": "^1.7.11",
+    "dotenv": "^16.4.5",
     "helmet": "^7.1.0",
     "mongoose": "^8.2.2",
     "morgan": "^1.10.0"
