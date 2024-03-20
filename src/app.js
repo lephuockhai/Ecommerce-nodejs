@@ -22,12 +22,15 @@ const app = express(); //initial a new app use express module
     app.use(compression()); // dung de nen cac file, thong tin o server de giam kich thuoc gui den client
 };
 //init db
+require('./dbs/init.mongodb')
+const { checkOverload } = require('./helpers/check.connect')
+// checkOverload()
 
 //init router
 app.get('/', (req, res, next) => {
     const strCompress = "Hello my Fen"
     return res.status(200).json({
-        message: "Welcome to my house!",
+        message: "Welcome to my web server!",
         metadata: strCompress.repeat(10000)
     })
 })

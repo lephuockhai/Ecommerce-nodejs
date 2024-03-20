@@ -1,13 +1,14 @@
-// file initial network nodejs | khai bao port va khoi dong server
+// // file initial network nodejs | khai bao port va khoi dong server
 
 const app = require("./src/app");
-const port = 3055;
+port = 3055;
 
+// khai bao server se lang nghe port 3055 khi ket noi duoc voi port 3055 thi no se duoc tra ve ham callback () => {...}
 const server = app.listen(port, () => {
-    console.log(`WSV Ecommerce start with ${port}`);
+    console.log(`web server is running on port ${port}`);
 });
 
-process.on('SIGINT', () => {
-    server.close( () => console.log('Exit server Express'));
-    // khong su dung neu co thi chi su dung notify ...
-}); 
+//dung khi ctrl + c thi se khong ket noi nua
+process.on('SIGINT', ()=> {
+    server.close( ()=> console.log("exit server express"));
+});
