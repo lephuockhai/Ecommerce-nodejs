@@ -1,7 +1,7 @@
 // // file initial network nodejs | khai bao port va khoi dong server
 
-const app = require("./src/app")    
-port = process.env.port
+const app = require("./src/app")
+const { app: {port} } = require('./src/configs/config.mongodb')
 
 // khai bao server se lang nghe port 3055 khi ket noi duoc voi port 3055 thi no se duoc tra ve ham callback () => {...}
 const server = app.listen(port, () => {

@@ -1,0 +1,12 @@
+@url_dev=http://localhost:3052/v1/api
+
+
+POST {{url_dev}}/shop/signup HTTP/1.1
+Content-Type:application/json
+x-api-key: 2a6130c07074a7c6676924d32767d7231d7e8845a696614a26b7c0a1c7464c8fb789753f3ac29ce3aff9b8cd8cc39539e323cf246290f240d5fb3b0f02bdf81c
+
+{
+    "name":"Shop Do Si",
+    "email":"shopdosi6@gmail.com",
+    "password":"123456aA@"
+}
